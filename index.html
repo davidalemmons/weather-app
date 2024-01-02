@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <figure>
+            <img id="logo" src="./assets/wclogo.webp" alt="">
+         </figure>
+         <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="navlist" class="nav-links">
+            <li id="navitems">
+                <a href="">home</a>
+            </li>
+            <li id="navitems">
+                <a href="">saved</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <div id="location_input">
+            <input type="text" id="location-input" placeholder="Enter Location">
+            <button id="get-weather-btn">Get Weather</button>
+
+            <div id="unit-selection">
+                <input type="radio" id="celsius" name="unit" value="C">
+                <label for="celsius">Celsius</label>
+                <input type="radio" id="fahrenheit" name="unit" value="F" checked>
+                <label for="fahrenheit">Fahrenheit</label>
+            </div>
+        </div>
+        <div id="weather-container">
+            <h1 id="location"></h1>
+            <div id="temperature"></div>
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <div id="weather-condition"></div>
+            <div id="humidity"></div>
+            <div id="wind"></div>
+            <!-- Add more elements as needed -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
