@@ -10,6 +10,7 @@ nav {
     background-color: #333;
     color: white;
     padding: 10px 0;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -18,17 +19,7 @@ nav h1 {
 }
  
 #logo{
-    width: 16%;
-}
- 
-nav ul {
-    padding: 0;
-    list-style: none;
-}
- 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+    width: 12%;
 }
  
 nav a {
@@ -105,6 +96,102 @@ nav a {
 #get-weather-btn:hover {
     background-color: #357ABD; /* Darker shade for hover effect */
 }
+
+/* General Styles for the Forecast Section */
+#forecast-section {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+#forecast-container > div {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+#forecast-container img {
+    width: 50px; /* Adjust size of weather icons */
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Styles for Text Elements */
+#forecast-container div {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: white;
+}
+
+#forecast-container > div > div:first-child {
+    font-weight: bold;
+    font-size: 16px;
+    color: #007bff; /* Color for the day of the week */
+}
+
+/* Styles for High and Low Temperatures */
+.temp {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* General Styles for the Weather Container */
+#weather-container {
+    font-family: 'Arial', sans-serif;
+    background-color: hsla(0, 0%, 0%, 0.212);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px; /* Adjust based on your layout */
+    margin: auto;
+}
+
+/* Header Styles */
+#weather-container h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Time and Temperature Styles */
+#weather-container #time,
+#weather-container #temperature {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Weather Icon Styles */
+#weather-container img {
+    width: 80px; /* Adjust based on your preference */
+    height: auto;
+    margin: 10px 0;
+}
+
+/* Weather Details Styles */
+#weather-container > div {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+#weather-container #humidity,
+#weather-container #wind, #weather-container #weather-condition  {
+    font-weight: bold;
+}
+
+
  
 @media (max-width: 600px) {
     #location-input {
