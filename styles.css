@@ -2,71 +2,48 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #00fbff;
+    background-color: #007bff;
     color: #333;
 }
- 
+
 nav {
     background-color: #333;
     color: white;
     padding: 10px 0;
     border-radius: 10px;
     text-align: center;
+    width: 100%;
 }
 
-nav h1 {
-    margin: 0;
-}
- 
-#logo{
+#logo {
     width: 12%;
 }
- 
-nav a {
-    text-decoration: none;
-    color: white;
-}
- 
+
 #location_input {
     text-align: center;
     margin-top: 20px;
 }
- 
+
+h1 {
+    text-align: center;
+}
+
 #unit-selection {
     margin-top: 10px;
 }
- 
+
 #weather-container, #forecast-section {
     text-align: center;
     margin-top: 20px;
 }
- 
+
 #weather-container img {
     width: 100px;
     height: auto;
 }
- 
-.forecast-day {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
- 
-.forecast-day h3 {
-    margin-top: 0;
-}
- 
-.forecast-day img {
-    width: 50px;
-    height: auto;
-}
- 
+
 #location-input {
-    width: 60%; /* Adjust as needed */
+    width: 60%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -74,17 +51,16 @@ nav a {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 16px;
 }
- 
-/* Style to focus on the input box */
+
 #location-input:focus {
     border-color: #4A90E2;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(74, 144, 226, 0.6);
     outline: none;
 }
- 
+
 #get-weather-btn {
     padding: 10px 20px;
-    background-color: #4A90E2; /* Choose a color that fits your theme */
+    background-color: #4A90E2;
     color: white;
     border: none;
     border-radius: 4px;
@@ -92,14 +68,13 @@ nav a {
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
- 
+
 #get-weather-btn:hover {
-    background-color: #357ABD; /* Darker shade for hover effect */
+    background-color: #357ABD;
 }
 
-/* General Styles for the Forecast Section */
 #forecast-section {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
@@ -107,8 +82,8 @@ nav a {
 }
 
 #forecast-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -117,84 +92,103 @@ nav a {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: start;
+    color: white;
 }
 
 #forecast-container img {
-    width: 50px; /* Adjust size of weather icons */
+    width: 50px;
     height: auto;
     margin: 10px 0;
 }
 
-/* Styles for Text Elements */
-#forecast-container div {
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: white;
-}
-
-#forecast-container > div > div:first-child {
-    font-weight: bold;
-    font-size: 16px;
-    color: #007bff; /* Color for the day of the week */
-}
-
-/* Styles for High and Low Temperatures */
-.temp {
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-/* General Styles for the Weather Container */
 #weather-container {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: hsla(0, 0%, 0%, 0.212);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    max-width: 400px; /* Adjust based on your layout */
+    max-width: 400px;
     margin: auto;
 }
 
-/* Header Styles */
-#weather-container h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Time and Temperature Styles */
-#weather-container #time,
-#weather-container #temperature {
+#weather-container h1, #weather-container #time, #weather-container #temperature {
     font-size: 20px;
     color: #333;
     margin-bottom: 10px;
 }
 
-/* Weather Icon Styles */
 #weather-container img {
-    width: 80px; /* Adjust based on your preference */
+    width: 80px;
     height: auto;
     margin: 10px 0;
 }
 
-/* Weather Details Styles */
-#weather-container > div {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 8px;
+#hr-container {
+    display: flex;
+    overflow-x: auto;
+    margin-left: 16px;
+    margin-right: 16px;
+    background-color: rgba(128, 128, 128, 0.685);
+    width: 100%;
 }
 
-#weather-container #humidity,
-#weather-container #wind, #weather-container #weather-condition  {
-    font-weight: bold;
+.hour-container {
+    text-align: center;
+    width: calc(100%/8);
+    padding: 8px;
+    margin-right: 8px;
+    color: white;
+    border-radius: 10%;
+    background-color: #333;
+    flex: 0 0 auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    #humidity1, #humidity2, #humidity3, #humidity4, #humidity5, #humidity6, #humidity7,
+    #wind1, #wind2, #wind3, #wind4, #wind5, #wind6, #wind7 {
+        display: none;
+    }
+    #logo {
+        width: 20%;
+    }
 }
 
 
- 
 @media (max-width: 600px) {
-    #location-input {
+    #location-input, #get-weather-btn {
         width: 80%;
+    }
+
+    #logo {
+        width: 20%;
+    }
+
+    .hour-container {
+        width: calc(100%/4); 
+    }
+
+    #forecast-container > div, #weather-container h1, #weather-container #time, #weather-container #temperature {
+        font-size: 14px; 
+    }
+
+    #weather-container, #forecast-section {
+        padding: 10px;
+    }
+
+    #weather-container img, #forecast-container img {
+        width: 40px;
     }
 }
