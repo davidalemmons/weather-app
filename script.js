@@ -4,7 +4,7 @@ function convertTemperature(temperature, unit) {
  
 function getWeather(location, unit) {
     const apiKey = '99665606db5b4da1b88144836233112';
-    const url = 'http://api.weatherapi.com/v1/forecast.json?key=99665606db5b4da1b88144836233112&q='+location+'&days=7&aqi=no&alerts=no'
+    const url = 'https://api.weatherapi.com/v1/forecast.json?key=99665606db5b4da1b88144836233112&q=' +location+ '&days=7&aqi=no&alerts=no'
 
     fetch(url)
         .then(response => {
